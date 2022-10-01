@@ -1,38 +1,275 @@
 .App {
-  text-align: center;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    background-color: lightgrey;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Design for Side Bar*/
+.Sidebar {
+    box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+    flex-direction: row;
+    width: 250px;
+    height: 550px;
+    padding: 50px 5px 0px 5px;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-menu {
+    padding: 50px 0px 5px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-text span {
+    color: black;
+    margin: 0 0 0 8px;
+}
+a {
+    text-decoration: none;
+}
+.nav-text {
+    padding: 1rem;
+    display: flex;
+    align-content: flex-start;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.2s;
+}
+    .nav-text:hover{
+        background-color: black;
+       
+    }
+    .nav-text:hover span {
+        color: whitesmoke;
+    }
+
+
+.nav-menu-items{
+    padding: 10px;
+}
+/*Right side Container*/
+
+.container {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Black Header with Link*/
+.header {
+    height: 30px;
+    background-color: #282c34;
+    text-align: center;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header__link{
+    padding: 5px;
+    
+}
+    .header__link a {
+        color: forestgreen;
+    }
+
+.white__page{
+    margin: 20px 25px 20px 30px;
+    height: fit-content;
+    width:95%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+/*Page Upper body with search bar and name*/
+.name__search__body {
+    display: flex;
+    
+}
+    .name{
+        width:60%;
+        margin: 0 0 0 1rem;
+    }
+        
+    .search {
+        width: 40%;
+        height: 30px;
+        margin: 1rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        background-color: white;
+        outline: auto;
+        outline-color: lightgray;
+        display: flex;
+        flex-direction: row;
+        color: gray;
+    }
+
+        .search input {
+            width: 80%;
+            border: none;
+            font-size: 1rem;
+            font-family: var(--font-raleway);
+            font-weight: 500;
+            outline: none;
+            background-color: white;
+        }
+
+        .search span {
+            width: 10%;
+            height:1rem;
+            cursor: pointer;
+        }
+
+
+
+/*Home Page All data bodies */
+.all__data__items {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+/*Search and Name*/
+    .name__search__body {
+        
+    }
+
+    .second__body {
+        height: 50px;
+    }
+
+    .third__body {
+        height: 50px;
+    }
+
+.rooms__container {
+    width: 25%;
+    text-align: center;
+}
+
+.data__items {
+    width: 75%;
+}
+
+/*Black Card for Offices on left*/
+.card {
+    background-color: black;
+    border-radius: 4px;
+    padding: 5px 0 5px 20px;
+    color: whitesmoke;
+    margin: 20px 20px 10px 20px;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    .black__card {
+        height: 10rem;
+        width: 85%;
+        font-weight:200;
+        color:darkseagreen;
+    }
+
+.name p{
+    font-size: small;
+    color: grey;
+}
+
+/*Sign IN Page*/
+.signin__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 130vh;
+}
+    .signin__card{
+        height: 70%;
+        width: 30%;
+        background-color: white;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        -webkit-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.31); 
+        box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.31);
+    }
+
+        .signin_logo {
+            height: 20%;
+            padding: 2rem 0 0 5rem;
+        }
+        .signin_content{
+            padding: 0 0 2rem 4rem;
+            height: 40%
+        }
+            .signin__field {
+                height: 30px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+                background-color: white;
+                outline: auto;
+                outline-color: lightgray;
+                display: flex;
+                flex-direction: row;
+                color: gray;
+                width: 78%;
+            }
+
+                .signin__field input {
+                    width: 80%;
+                    border: none;
+                    font-size: 1rem;
+                    font-family: var(--font-raleway);
+                    font-weight: 500;
+                    outline: none;
+                    background-color: white;
+                }
+        .signin_button {
+            height: 10%;
+            padding: 1rem 0 0 10rem;
+        }
+                .myButton {
+                    color: rgb(255, 255, 255);
+                    font-size: 16px;
+                    line-height: 16px;
+                    padding: 7px;
+                    border-radius: 18px;
+                    font-weight: normal;
+                    background-color: steelblue;
+
+                    box-shadow: rgb(0, 0, 0) 0 0px 8px 0.2px;
+                    border: 0.5px rgb(28, 110, 164);
+                    display: inline-block;
+                }
+
+                    .myButton:hover {
+                        background: #1C6EA4;
+                    }
+
+                    .myButton:active {
+                        background: #144E75;
+                    }
+/*Data Tables of Rooms Bookings and Users*/
+
+.container__all__info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 550px;
+}
+
+.datatable {
+    height: 400px; 
+    width: 97%;
+    margin: 1rem;
+}
+
+.cellWithStatus{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Booked{
+    background-color: darkred;
 }
