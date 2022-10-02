@@ -16,10 +16,7 @@ function Home() {
                         <Data />
                     </div>
                     <div className="rooms__container">
-                        <div className="card">
-                            <BlackCard />
-                        </div>
-
+                        <BlackCard/>
                     </div>
                 </div>
 

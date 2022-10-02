@@ -1,15 +1,16 @@
 import * as React from 'react';
-import { DataGrid, Cell } from '@mui/x-data-grid';
-import { CellRendererSelectorFunc, ICellRenderer } from 'ag-grid-community';
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
+import { Edit, Delete } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
-const columns = [
+const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'roomNum', headerName: 'Room Number', width: 130 },
+    { field: 'roomNum', headerName: 'Room No.', width: 100 },
     { field: 'officeName', headerName: 'Office Name', width: 170 },
     {
         field: 'city',
         headerName: 'City',
-        width: 120,
+        width: 120
     },
     {
         field: 'fullName',
@@ -24,8 +25,53 @@ const columns = [
     {
         field: 'status',
         headerName: 'Status',
-        width: 90
+        width: 90,
+        renderCell: (param) => {
+            if (param.row.status === "Booked") {
+                return (
+                    <div className="booked">
+                        {param.row.status}
+                    </div>
+                );
+            }
+            else if (param.row.status === "Available") {
+                return (
+                    <div className="available">
+                        {param.row.status}
+                    </div>
+                );
+            }
+        }
     },
+    {
+        field: 'actions',
+        headerName: 'Actions',
+        editable: false,
+        renderCell: (param) => {
+            if (param.row.status === "Available") {
+                return (
+                    <Link to='/home' className='sidebar__menu__icon'>
+                        <span>Book</span>
+                    </Link>
+                );
+            }
+
+        }
+    },
+    {
+        field: 'delete',
+        headerName: '',
+        editable: false,
+        disableColumnMenu: true,
+        renderCell: (params: GridRenderCellParams) => (
+            <Delete
+                onClick={() => {
+                    params.api.setRowMode(params.id, 'delete');
+                }}
+                sx={{ cursor: 'pointer' }}
+            />
+        )
+    }
 ];
 
 const rows = [
@@ -35,14 +81,6 @@ const rows = [
 ];
 
 export default function DataTable() {
-    const ActionColumn = [
-        {
-            field: '',
-            headerName: '',
-            width: 100,
-            ICellRenderer
-        }
-    ];
     return (
         <div className="datatable">
             <DataGrid

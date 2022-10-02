@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../Components/Navibar';
 import Search from '../Components/SearchBar';
 import Head_L from '../Components/Head_Link';
-import DataTable from '../Components/Datatable_Rooms';
+import DataTable from '../Components/Datatable_User';
 
 
 function AllRooms() {
