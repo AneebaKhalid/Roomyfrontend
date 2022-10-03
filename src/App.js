@@ -10,7 +10,9 @@ import Home from './Pages/Body';
 import SignIn from './Pages/SignIn';
 import AllBookings from './Pages/All_Bookings';
 import AllRooms from './Pages/All_Rooms';
-import Page from './Pages/AllData';
+import AvailRooms from './Pages/Available_Rooms';
+import HomeData from './Pages/AllData';
+import Calender_Manage from './Pages/Calender_Manage';
 import './App.css';
 
 function App() {
@@ -23,8 +25,10 @@ function App() {
                   <Route path="/" element={<SignIn />}></Route>
                   <Route path="/allbookings" element={<AllBookings />}></Route>
                   <Route path="/allrooms" element={<AllRooms />}></Route>
-                  <Route path="/b" element={<Page />}></Route>
+                  <Route path="/b" element={<HomeData />}></Route>
                   <Route path="/home" element={<Home />}></Route>
+                  <Route path="/availRoom" element={<AvailRooms />}></Route>
+                  <Route path="/calMang" element={<Calender_Manage />}></Route>
                   </Routes>
               </Router>
           

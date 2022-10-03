@@ -5,8 +5,8 @@ function Head_Link() {
     return (
         <div className="header">
             <div className='header__link'>
-                <Link to='/'>
-                    <span>Rooms Available</span>
+                <Link to='/availRoom'>
+                    <span>Available Rooms</span>
                 </Link>
             </div>
 

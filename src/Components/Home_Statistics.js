@@ -1,4 +1,7 @@
+import { CircularProgress } from '@mui/material';
 import React from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css'
 
 function Statistic_Cards() {
     return (
@@ -20,8 +23,23 @@ function Statistic_Cards() {
             </div>
             <div className="second_body_right">
               
-                <div className="office_statistics"><h1>hello</h1></div>
-                <div className="office_statistics"><h1>hello</h1></div>
+                <div className="office_statistics">
+                    <div className="statistic_card_office">
+                        <h3>Office Name</h3>
+                        <p>Rooms: 2/10</p>
+                    </div>
+
+                    <CircularProgressbar className="progress_bar" value={20} text={'20%'} />
+                </div>
+                <div className="office_statistics">
+                    <div className="statistic_card_office">
+                        <h3>Office Name</h3>
+                        <p>Rooms: 2/10</p>
+                    </div>
+
+                    <CircularProgressbar className="progress_bar" value={20} text={'20%'} />
+                </div>
+
             </div>
 
         </div>

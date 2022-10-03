@@ -2,12 +2,9 @@ import React from 'react';
 import Navigation from '../Components/Navibar';
 import Search from '../Components/SearchBar';
 import Head_L from '../Components/Head_Link';
-import DataTable from '../Components/Datatable_Rooms';
+import Calender from '../Components/Calender';
 
-
-
-
-function AllRooms() {
+function Manage_On_Calender() {
     return (
         <>
             <div className="container__all__info">
@@ -19,13 +16,11 @@ function AllRooms() {
                         <div className="white__page">
                             <div className="name__search__body">
                                 <div className="name">
-                                    <h3>All Rooms</h3>
+                                    <h3>Manage your Bookings</h3>
                                 </div>
                                 <Search />
                             </div>
-                            <div className="Data__rows">
-                                <DataTable />
-                            </div>
+                            <Calender />
                         </div>
 
                     </div>
@@ -34,8 +29,7 @@ function AllRooms() {
             </div>
 
         </>
-    );
-
+        );
 }
 
-export default AllRooms;
+export default Manage_On_Calender;

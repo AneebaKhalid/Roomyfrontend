@@ -2,12 +2,11 @@ import * as React from 'react';
 import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import { Edit, Delete } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import { useTable, useGroupBy } from 'react-table';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'roomNum', headerName: 'Room No.', width: 100 },
-    { field: 'officeName', headerName: 'Office Name', width: 170, rowGroup: true, hide: true },
+    { field: 'officeName', headerName: 'Office Name', width: 170 },
     {
         field: 'city',
         headerName: 'City',
@@ -31,13 +30,6 @@ const columns: GridColDef[] = [
             if (param.row.status === "Booked") {
                 return (
                     <div className="booked">
-                        {param.row.status}
-                    </div>
-                );
-            }
-            if (param.row.status === "Available") {
-                return (
-                    <div className="available">
                         {param.row.status}
                     </div>
                 );
@@ -82,16 +74,23 @@ const rows = [
     { id: 3, roomNum: 'Lab', officeName: 'Head Office', city: 'Nuemberg', status: 'Booked' }
 ];
 
+const available = [];
+rows.map(row => {
+    if (row.status === 'Available') {
+        available.push(row)
+    }
+});
+console.log(available)
 
 export default function DataTable() {
     return (
         <div className="datatable">
             <DataGrid
-                rows={rows}
+                rows={available}
                 columns={columns}
                 pageSize={5}
                 rowsPerPageOptions={[5]}
-                
+
             />
         </div>
     );

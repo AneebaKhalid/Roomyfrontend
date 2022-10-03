@@ -4,7 +4,7 @@ function BlackCard() {
     return (
         <div className="card">
             <div className="black__card">
-                <h4>Book a room</h4>
+                <h4>Head Office</h4>
                 <p>Book a room for this week</p>
             </div>
         </div>

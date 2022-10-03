@@ -332,13 +332,19 @@ a {
     display: flex;
     flex-direction: row;
     width: 50%;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+    white-space: nowrap;
 }
     .office_statistics{
-        height:80%;
-        width:50%;
+        height:90%;
+        width:90%;
         background-color: black;
         border-radius: 1rem;
         margin-left: 0.5rem;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: row;
     }
     .small_white_card {
         height: 80%;
@@ -386,3 +392,14 @@ h3 {
     .add_icon:hover{
         font-size: 200%;
     }
+
+.progress_bar{
+    float: right;
+    height: 37px;
+    width: 37px;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.statistic_card_office{
+    margin: 0.5rem 0 0 0.5rem;
+}

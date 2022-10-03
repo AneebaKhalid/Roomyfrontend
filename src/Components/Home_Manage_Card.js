@@ -30,7 +30,7 @@ function ThirdBody() {
                     <h4>Calender</h4>
                     <p>Manage your Bookings on Calender</p>
 
-                    <Link className="arrow">
+                    <Link className="arrow" to='/calMang'>
                         <AiIcons.AiOutlineArrowRight />
                     </Link>
                 </div>

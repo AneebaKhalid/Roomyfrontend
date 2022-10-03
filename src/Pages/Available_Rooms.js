@@ -2,11 +2,10 @@ import React from 'react';
 import Navigation from '../Components/Navibar';
 import Search from '../Components/SearchBar';
 import Head_L from '../Components/Head_Link';
-import DataTable from '../Components/Datatable_Bookings';
-import GroupBy from '../Components/GroupByTable';
+import DataTable from '../Components/Datatable_Available_Rooms';
 
 
-function AllBokkings() {
+function AllRooms() {
     return (
         <>
             <div className="container__all__info">
@@ -14,18 +13,18 @@ function AllBokkings() {
                 <div className="container">
                     <Head_L />
                     <div className="all__data__items">
-                        
-                            <div className="white__page">
-                                <div className="name__search__body">
-                                    <div className="name">
-                                        <h3>All Bookings</h3>
-                                    </div>
-                                    <Search />
+
+                        <div className="white__page">
+                            <div className="name__search__body">
+                                <div className="name">
+                                    <h3>All Rooms</h3>
                                 </div>
-                            <div className="Data__rows">
-                                <GroupBy />
-                                </div>
+                                <Search />
                             </div>
+                            <div className="Data__rows">
+                                <DataTable />
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -37,4 +36,4 @@ function AllBokkings() {
 
 }
 
-export default AllBokkings;
+export default AllRooms;
