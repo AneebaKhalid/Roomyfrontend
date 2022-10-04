@@ -27,7 +27,7 @@ function Navigation() {
         },
         {
             title: 'Community',
-            path: '',
+            path: '/users',
             icon: <faIcons.FaUsers />,
             cName: 'nav-text'
         },
