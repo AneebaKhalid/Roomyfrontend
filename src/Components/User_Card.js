@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 
 function User_card(props) {
@@ -18,6 +19,8 @@ function User_card(props) {
                 <div>
                     <img className="cellImg" src="https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="avatar"/>
                 </div>
+                <Link to='/users/single'> View </Link>
+              
 
 
 

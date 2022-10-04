@@ -14,6 +14,7 @@ import AvailRooms from './Pages/Available_Rooms';
 import HomeData from './Pages/AllData';
 import Calender_Manage from './Pages/Calender_Manage';
 import All_Users from './Pages/All_Users';
+import Single_View from './Pages/Single_View_Page';
 import './App.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                   <Route path="/availRoom" element={<AvailRooms />}></Route>
                   <Route path="/calMang" element={<Calender_Manage />}></Route>
                   <Route path="/users" element={<All_Users />}></Route>
+                  <Route path="/users/single" element={<Single_View />}></Route>
                   </Routes>
               </Router>
           

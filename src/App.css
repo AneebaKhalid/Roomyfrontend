@@ -446,3 +446,18 @@ h3 {
 hr{
     margin:0;
 }
+
+.view{
+    display: flex;
+    flex-direction: row;
+}
+    .left_titles{
+        width: 50%;
+    }
+
+    .cellImgProfile{
+        
+        width:50%;
+        float:right;
+        border-radius: 10%;
+    }
